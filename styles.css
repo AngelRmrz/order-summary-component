@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+	--primary-pale-blue: hsl(225, 100%, 94%);
+	--primary-bright-blue: hsl(245, 75%, 52%);
+	--neutral-pale-blue: hsl(225, 100%, 98%);
+	--neutral-desaturated-blue: hsl(224, 23%, 55%);
+	--neutral-dark-blue: hsl(223, 47%, 23%);
+	--neutral-white: hsl(0, 0%, 100%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+	font-family: 'Red Hat Display', sans-serif;
+}
+body {
+	background-color: var(--primary-pale-blue);
+	background-image: url('./images/pattern-background-mobile.svg');
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: 100%;
+}
+@media (min-width: 768px) {
+	body {
+		background-image: url('./images/pattern-background-desktop.svg');
+	}
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.card {
+	background-color: var(--neutral-white);
+	border-radius: 1rem;
+	width: 90%;
+	max-width: 375px;
+}
+
+.card__image {
+	width: 100%;
+	border-radius: 1rem 1rem 0 0;
+}
+
+.card__content {
+	padding: 2rem;
+}
+
+.card__info h1 {
+	font-size: 2.4rem;
+	font-weight: 700;
+	color: var(--neutral-dark-blue);
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+.card__info p {
+	font-size: 1.6rem;
+	font-weight: 500;
+	color: var(--neutral-desaturated-blue);
+	text-align: center;
+}
+.details__price {
+	align-content: center;
+	align-items: center;
+	background-color: var(--neutral-pale-blue);
+	border-radius: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	margin: 1rem;
+	padding: 1rem;
+}
+.price__info p {
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: var(--neutral-dark-blue);
+}
+.price__info span {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--neutral-desaturated-blue);
+}
+.price__info_link {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: var(--primary-bright-blue);
+}
+.price__info_link:hover {
+	text-decoration: underline;
+}
+
+.card__buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+.button__primary {
+	background-color: var(--primary-bright-blue);
+	border-radius: 1rem;
+	border: none;
+	color: var(--neutral-white);
+	font-size: 1.5rem;
+	font-weight: 700;
+	padding: 1.5rem;
+	text-align: center;
+}
+.button__primary:hover {
+	background-color: hsl(245, 75%, 62%);
+	cursor: pointer;
+}
+.button__secondary {
+	background-color: var(--neutral-pale-blue);
+	border-radius: 1rem;
+	border: none;
+	color: var(--neutral-desaturated-blue);
+	font-size: 1.5rem;
+	font-weight: 700;
+	padding: 1.5rem;
+	text-align: center;
+}
+.button__secondary:hover {
+	cursor: pointer;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	padding: 1rem;
+}
